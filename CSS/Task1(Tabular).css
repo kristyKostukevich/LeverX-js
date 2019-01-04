@@ -1,0 +1,42 @@
+body {
+    width: 100vw;
+    height: 100vh;
+}
+
+table{
+    margin-top: 1%;
+    width: 100%;
+    height: 100%;
+
+}
+.orange-sell{
+    height: 11%;
+}
+
+.orange-sell td{
+    background-color: orange;
+}
+
+.yellow-sell{
+    height: 39%;
+}
+
+.yellow-sell td{
+    background-color: yellow;
+}
+
+.blue-sell{
+    height: 29%;
+}
+.blue-sell td{
+    background-color: blue;
+}
+
+
+.grey-sell{
+    height: 17%;
+}
+
+.grey-sell td{
+    background-color: grey;
+}
