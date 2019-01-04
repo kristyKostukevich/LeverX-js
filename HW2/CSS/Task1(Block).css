@@ -1,0 +1,31 @@
+body{
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+}
+
+.sell{
+    margin: 0.3% 0.1%;
+    display: inline-block;
+}
+
+.orange{
+    background-color: orange;
+    width: 49vw;
+    height: 11vh;
+}
+.yellow{
+    background-color: yellow;
+    width: 98.5vw;
+    height: 44vh;
+}
+.blue{
+    background-color: blue;
+    width: 32.5vw;
+    height: 19vh;
+}
+.grey{
+    background-color: grey;
+    width: 24.3vw;
+    height: 18vh;
+}
