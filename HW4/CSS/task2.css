@@ -1,0 +1,19 @@
+.flex-wrapper {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.flex-wrapper div {
+    background-color: DodgerBlue;
+    color: white;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+    font-size: 30px;
+}
+.flex-wrapper div:first-of-type{
+    background-color: black;
+    font-weight: bold;
+    margin: 30px 50%;
+}
