@@ -1,0 +1,122 @@
+body{
+    width: 98vw;
+    height: 100vh;
+    text-align: center;
+}
+
+
+    .inline-block {
+        margin: 0.5%;
+        display: inline-block;
+    }
+
+    .first {
+        background-color: red;
+        width: 38%;
+        height: 15%;
+
+    }
+
+    .second {
+        background-color: darkorange;
+        width: 59%;
+        height: 15%;
+
+    }
+
+    .third {
+        background-color: #00d500;
+        width: 98%;
+        height: 50%;
+        margin-top: 0;
+    }
+
+    .fourth {
+        background-color: #714002;
+        width: 32%;
+        height: 25%;
+    }
+
+    .fifth {
+        background-color: #2700fc;
+        width: 32%;
+        height: 25%;
+    }
+
+    .sixth {
+        background-color: #a800dc;
+        width: 31.9%;
+        height: 25%;
+    }
+@media only screen and (max-width: 415px) {
+    .first {
+        background-color: #00d500;
+        width: 98%;
+        height: 15%;
+
+    }
+
+    .second {
+        background-color: #a800dc;
+        width: 98%;
+        height: 15%;
+
+    }
+
+    .third {
+        background-color: red;
+        width: 98%;
+        height: 50%;
+        margin-top: 0;
+    }
+
+    .fourth {
+        display: none;
+    }
+
+    .fifth {
+        display: none;
+    }
+
+    .sixth {
+        display: none;
+    }
+}
+@media only screen and (max-width: 1367px) and (min-width: 416px) {
+    .first {
+        background-color: darkorange;
+        width: 38%;
+        height: 15%;
+
+    }
+
+    .second {
+        background-color: #a800dc;
+        width: 59%;
+        height: 15%;
+
+    }
+
+    .third {
+        background-color: red;
+        width: 98%;
+        height: 50%;
+        margin-top: 0;
+    }
+
+    .fourth {
+        background-color: #00d500;
+        width: 48.5%;
+        height: 25%;
+    }
+
+    .fifth {
+        background-color: #2700fc;
+        width: 48.5%;
+        height: 25%;
+    }
+
+    .sixth {
+       display: none;
+    }
+}
