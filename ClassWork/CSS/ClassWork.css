@@ -1,0 +1,148 @@
+body{
+    width: 98vw;
+
+}
+.menu{
+    width: 100%;
+    height: 80px;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    z-index: 3;
+    background-color: #FFF;
+    top:0;
+}
+.first-container{
+    display: flex;
+}
+.menu img {
+    width: 50px;
+    height: 50px;
+    margin-right: 20px;
+    margin-top: 20px;
+}
+
+.menu p{
+    color: #737373;
+    width: 215px;
+    max-height: 47px;
+    padding: 1px 0 2px 20px;
+    line-height: 1.57;
+    text-align: left;
+    border-left: solid 2px #8d8d8d;
+    margin: 20px 0;
+}
+.menu button{
+    width: 60px;
+    height: 50px;
+    margin-top: 20px;
+    margin-right: 20px;
+    color: blue;
+    background-color: #FFF;
+    border: 0;
+    font-family: "Roboto Condensed";
+    font-size: 18px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+.menu a{
+    text-decoration: none;
+}
+
+.menu form{
+    display: flex;
+
+}
+.menu input{
+    background-color: #9f9f9f;
+    height: 30px;
+    width: 200px;
+    border: 0;
+    margin-top: 26px;
+    margin-right: 20px;
+}
+.item{
+    width: 250px;
+    border-bottom: 1px solid #737373;
+    padding: 1%;
+
+}
+.item:last-child{
+    border-bottom: 0;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.item:first-child{
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.drop-down{
+    width: 255px;
+    border: 1px solid #737373;
+    border-radius: 10px;
+    display: none;
+    background-color: #FFF;
+}
+.drop-down-button:hover .drop-down{
+    display: block;
+}
+.item:hover{
+    background-color: #9f9f9f;
+}
+.main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    padding-top: 100px;
+}
+.main-items{
+    position: relative;
+    width: 25%;
+    margin: 1%;
+    border: 1px solid black;
+    height: 55vh;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
+}
+
+.main-items img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    z-index: 1;
+}
+.main-item{
+    top:0;
+    position: absolute;
+    border-radius: 10px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 2;
+    height: 55vh;
+    color: #FFF;
+
+}
+.main-items button{
+    bottom: 0;
+    background-color: #1e1e1e;
+    position: absolute;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    width: 100%;
+    border: 0;
+    color: #FFF;
+    height: 30px;
+}
+
+.first-text{
+    font-size: 30px;
+    padding: 2%;
+}
+.second-text{
+    bottom: 14px;
+    background-color: #6a6a6a;
+    position: absolute;
+    padding: 1%;
+}
