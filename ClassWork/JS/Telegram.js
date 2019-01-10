@@ -21,10 +21,12 @@ function createCardMessage(img, name) {
     document.getElementsByClassName('column-massage')[0].insertBefore(card, document.getElementsByClassName('write-massage')[0]);
 }
 var img;
-var name = ["Kristy", "Masha", 'Kate', 'Jack', 'Jone', 'Nick', 'Vika', 'Anna', 'Dasha', 'Tom'];
+var nameArr = ["Kristy", "Masha", 'Kate', 'Jack', 'Jone', 'Nick', 'Vika', 'Anna', 'Dasha', 'Tom'];
+
+
 for (var i = 0; i<10; i++)
 {   img = '../HW2/Image/'+(i+1)+'.jpg';
-    createCardPerson( img, 'Kristy'+i);
+    createCardPerson( img, nameArr[i]);
     createCardMessage( img, 'There are a lot of books on history, about animals, travellers, children,' +
         'school and so on. Children like to read adventure and magic books, science fiction and detective' +
         'stories. They enjoy stories, short stories, novels, fairy-tales, fables and poems.')

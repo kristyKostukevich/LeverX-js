@@ -31,7 +31,7 @@ body{
 }
 .column-person{
     width: 40%;
-    overflow-y: auto;
+    overflow-y: scroll;
     background-color: #FFF;
     margin-top: 40px;
     padding-top: 50px;
@@ -58,7 +58,7 @@ body{
     background-color: rgba(159, 159, 159, 0.42);
 }
 .column-massage{
-    overflow-y: auto;
+    overflow-y: scroll;
     background-color: #FFF;
     width: 60%;
     display: flex;
@@ -172,3 +172,22 @@ body{
         min-width: 60px;
     }
 }
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
+
+::-webkit-scrollbar-track {
+    margin-top: 50px;
+    margin-bottom: 60px;
+    border: 1px solid rgba(0, 0, 0, 0.09);
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.09);
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+::-moz-scrolled-canvas
+
