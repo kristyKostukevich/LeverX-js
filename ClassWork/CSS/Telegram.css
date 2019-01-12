@@ -58,9 +58,17 @@ body{
     background-color: rgba(159, 159, 159, 0.42);
 }
 .column-massage{
-    overflow-y: scroll;
     background-color: #FFF;
     width: 60%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+
+}
+.body-message{
+    overflow-y: scroll;
+    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
@@ -84,15 +92,15 @@ body{
 }
 .massage-card p{
     margin-left: 10px;
-    background-color: rgba(141, 254, 205, 0.43);
+    background-color: rgba(158, 251, 255, 0.41);
     border-radius: 10px;
-    padding: 1%;
+    border: 10px solid rgba(158, 251, 255, 0);
     margin-right: 10px;
 }
 .write-massage{
     position:fixed;
     display: flex;
-    width: 35%;
+    width: 36%;
     align-items: center;
     height: 50px;
     border-top: 1px solid rgba(159, 159, 159, 0.42);
@@ -105,7 +113,7 @@ body{
 .write-massage i{
     margin-left: 10px;
 
- }
+}
 .write-massage input{
     width: 80%;
     margin-left: 10px;
@@ -135,7 +143,7 @@ body{
     width: 90%;
     border: 1px solid transparent;
     background-color: rgba(159, 159, 159, 0.42);
-
+    transition: 0.5s;
 }
 .search:hover{
     background-color: #FFF;
@@ -197,5 +205,11 @@ body{
     background: rgba(0, 0, 0, 0.2);
     border-radius: 10px;
 }
-::-moz-scrolled-canvas
+.back-message{
+    justify-content: flex-end;
+    margin-right: 10px;
+}
 
+.back-message p{
+    background-color:  rgba(209, 242, 244, 0.51);
+}
