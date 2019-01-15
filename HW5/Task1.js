@@ -101,11 +101,11 @@ function Ultrabook(numberOfProcCores, procType, frequency, availabilityOfHyper, 
                     manufact, graphicsCard, RAM, hardDiskSize, hardDiskType);
     weight = weight;
 
-    this.getWeigth = function() {
+    this.getWeight = function() {
         return weight;
     };
-    this.setWeigth = function(weight) {
-        weight = weight;
+    this.setWeight = function(outWeight) {
+        weight = outWeight;
     };
     this.getCharacteristics = function () {
         return this.toString() +
@@ -137,11 +137,13 @@ console.log(computer.getFrequency());
 console.log(computer.toString());
 var ultrabook = new Ultrabook(4, 'coreI7', 2700, true, 64, 'Lenovo', 'AMD', 100, 256);
 ultrabook.setHardDiskType('ssd');
-ultrabook.setWeigth(1000);
-console.log(ultrabook.getWeigth());
+ultrabook.setWeight(1000);
+console.log(ultrabook.getWeight());
 console.log(ultrabook.getCharacteristics());
 var server = new Server(4, 'coreI7', 2700, true, 64, 'Lenovo', 'AMD', 100, 256, 'hdd', '172.98.0.100');
 console.log(server.getCharacteristics());
-var click = function() {
+
+
+function clickCust() {
     alert("Created\\Changed");
 }
