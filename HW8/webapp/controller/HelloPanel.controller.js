@@ -12,6 +12,7 @@ sap.ui.define([
             // show message
             MessageToast.show(sMsg);
         },
+
         onOpenDialog : function () {
             var oView = this.getView();
 
@@ -29,6 +30,10 @@ sap.ui.define([
             } else {
                 this.byId("helloDialog").open();
             }
+        },
+
+        onCloseDialog : function () {
+            this.getView().byId("helloDialog").close();
         }
     });
 });
