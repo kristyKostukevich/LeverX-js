@@ -4,28 +4,34 @@
     <meta charset="UTF-8">
     <title>Task1</title>
     <link rel="stylesheet" href="style.css"/>
+    <script type="text/javascript" src="http://ajax.microsoft.com/ajax/jquery/jquery-1.6.2.min.js"></script>
+    <script src="http://ajax.aspnetcdn.com/ajax/jquery.templates/beta1/jquery.tmpl.min.js"></script>
+    <script type="text/javascript" src="index.js"></script>
 </head>
 <body>
     <button class="button" type="submit" onclick="onGet()">Get</button>
-    <button class="button" type="submit" onclick="onCount()">Count</button>
-    <button class="button" type="submit" onclick="onExpand()">Expand</button>
-    <button class="button" type="submit" onclick="onOrderBy()">OrderBy</button>
-    <button class="button" type="submit" onclick="onSearch()">Search</button>
-    <button class="button" type="submit" onclick="onSelect()">Select</button>
-    <button class="button" type="submit" onclick="onSkip()">Skip</button>
-    <button class="button" type="submit" onclick="onTop()">Top</button>
-    <button class="button" type="submit" onclick="onFiltr()">Filtr</button>
+    <button class="button" type="submit" onclick="onGet('$count')">Count</button>
+    <button class="button" type="submit" onclick="onGet('Expand')">Expand</button>
+    <button class="button" type="submit" onclick="onGet('?$orderby=UserName')">OrderBy</button>
+    <button class="button" type="submit" onclick="onGet('?$search=russell')">Search</button>
+    <button class="button" type="submit" onclick="onGet('?$select=UserName,Gender,FirstName')">Select</button>
+    <button class="button" type="submit" onclick="onGet('?$skip=5')">Skip</button>
+    <button class="button" type="submit" onclick="onGet('?$top=3')">Top</button>
+    <button class="button" type="submit" onclick="onGet('Filter')">Filter</button>
+
     <table border="1" cellpadding="5">
         <caption>Table</caption>
         <thead>
         <tr>
-            <th width="100px">Name</th>
-            <th width="100px">Kind</th>
-            <th width="100px">URL</th>
+            <th width="100px">First name</th>
+            <th width="100px">Gender</th>
+            <th width="100px">User name</th>
         </tr>
         </thead>
             <tbody>
             </tbody>
     </table>
+
+    <p id="count"></p>
 </body>
 </html>
