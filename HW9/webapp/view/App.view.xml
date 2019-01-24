@@ -9,7 +9,7 @@
             <Input value="{/firstName}" valueLiveUpdate="true" width="200px" enabled="{/enabled}"/>
             <Label text="{i18n>lastName}" class="sapUiSmallMargin"/>
             <Input value="{/lastName}" valueLiveUpdate="true" width="200px" enabled="{/enabled}"/>
-            <CheckBox selected="{/enabled}" text="Enabled"/>
+            <CheckBox selected="{/enabled}" text="{i18n>enabled}"/>
         </content>
     </Panel>
     <Panel headerText="{i18n>panel2HeaderText}" class="sapUiResponsiveMargin" width="auto">
@@ -41,39 +41,46 @@
 						}"/>
                 </l:VerticalLayout>
             </l:HorizontalLayout>
+
         </content>
     </Panel>
     <Panel headerText="{i18n>panel3HeaderText}" class="sapUiResponsiveMargin" width="auto">
         <content>
-            <List headerText="{i18n>productListTitle}" items="{products>/Products}">
-                <items>
-                    <ObjectListItem  press=".onItemSelected"
-                                     type="Active"
-                                     title="{products>ProductName}"
-                                    number="{
+            <List
+                    id="ProductList"
+                    headerText="{i18n>productListTitle}"
+                    items="{
+					path: 'products>/Products',
+					factory: '.productListFactory'
+				}">
+                <dependents>
+                    <StandardListItem
+                            id="productSimple"
+                            icon="sap-icon://warning"
+                            title="{products>ProductName} ({products>QuantityPerUnit})"
+                            info="{i18n>Discontinued}"
+                            type="Active"
+                            infoState="Error"
+                            press=".onItemSelected">
+                    </StandardListItem>
+                    <ObjectListItem
+                            id="productExtended"
+                            title="{products>ProductName} ({products>QuantityPerUnit})"
+                            number="{
 							parts: [
 								{path: 'products>UnitPrice'},
 								{path: '/currencyCode'}
 							],
 							type: 'sap.ui.model.type.Currency',
-							formatOptions: { showMeasure: false }
+							formatOptions : {
+								showMeasure : false
+							}
 						}"
-                                    numberUnit="{/currencyCode}"
-                                    numberState="{= ${products>UnitPrice} > ${/priceThreshold} ? 'Error' : 'Success' }">
-                        <attributes>
-                            <ObjectAttribute text="{products>QuantityPerUnit}"/>
-                            <ObjectAttribute title="{i18n>stockValue}"
-                                             text="{
-									parts: [
-										{path: 'products>UnitPrice'},
-										{path: 'products>UnitsInStock'},
-										{path: '/currencyCode'}
-									],
-									formatter: '.formatStockValue'
-								}"/>
-                        </attributes>
+                            type="Active"
+                            numberUnit="{/currencyCode}"
+                            press=".onItemSelected">
                     </ObjectListItem>
-                </items>
+                </dependents>
             </List>
         </content>
     </Panel>
