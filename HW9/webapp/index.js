@@ -12,7 +12,13 @@ sap.ui.require([
             firstName: "Kristy",
             lastName: "Kostyukevich",
             enabled: true,
-            panelHeaderText: "Data Binding Basics"
+            panelHeaderText: "Data Binding Basics",
+            address: {
+                street: "Dietmar-Hopp-Allee 16",
+                city: "Walldorf",
+                zip: "69190",
+                country: "Germany"
+            }
 
         });
 
