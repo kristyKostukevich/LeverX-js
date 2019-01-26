@@ -17,5 +17,10 @@ sap.ui.define([
             return oCurrency.formatValue([fUnitPrice * iStockLevel, sCurrCode], "string");
 
         },
+        onInit: function () {
+            var url = "https://services.odata.org/TripPinRESTierService/(S(3aostjazvukcnjbuztmsdqt0))/People";
+            var oModel = new sap.ui.model.json.JSONModel(url);
+            sap.ui.getCore().setModel(oModel, "product");
+        },
     });
 });

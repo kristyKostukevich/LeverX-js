@@ -5,6 +5,7 @@
         xmlns:mvc="sap.ui.core.mvc">
     <Panel headerText="{i18n>panel3HeaderText}" class="sapUiResponsiveMargin" width="auto">
         <content>
+            <l:HorizontalLayout>
             <List headerText="{i18n>productListTitle}" items="{products>/Products}">
                 <items>
                     <ObjectListItem title="{products>UserName} ({products>FirstName} {products>LastName}, {products>Gender})">
@@ -15,6 +16,27 @@
                     </ObjectListItem>
                 </items>
             </List>
+            <List headerText="{i18n>productListTitle}" items="{products>/Products}">
+                <items>
+                    <ObjectListItem title="Favorite feature:">
+                        <attributes>
+                            <ObjectAttribute
+                                    text="{products>FavoriteFeature}"/>
+                        </attributes>
+                    </ObjectListItem>
+                </items>
+            </List>
+                <List headerText="{i18n>productListTitle}" items="{address>/Address}">
+                    <items>
+                        <ObjectListItem title="Address info:">
+                            <attributes>
+                                <ObjectAttribute
+                                        text="{address>Address}"/>
+                            </attributes>
+                        </ObjectListItem>
+                    </items>
+                </List>
+            </l:HorizontalLayout>
         </content>
     </Panel>
 </mvc:View>
